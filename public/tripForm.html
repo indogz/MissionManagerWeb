@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/myStyle.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+
+    <div id=header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">Mission Manager beta</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Documentazione</a></li>
+                    <li><a href="badges.html">Badges</a></li>
+                    <li><span id="signOut"><a href="index.html" >LogOut</a></span></li>
+                    <li><a href="mobile.html">Mobile app</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id=content class="container">
+
+        <h2> Inserimento nuovo viaggio</h2>
+
+        <div class="divider"> </div>
+        <div class="row section">
+            <h5> Dati richiedente </h5>
+            <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+
+            <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col m4">
+                <input id="street" type="text" class="validate">
+                <label for="street">Street</label>
+            </div>
+
+            <div class="input-field col m2">
+                <input id="house_number" type="text" class="validate">
+                <label for="house_number">House number</label>
+            </div>
+
+            <div class="input-field col m4">
+                <input id="city" type="text" class="validate">
+                <label for="city">City</label>
+            </div>
+
+            <div class="input-field col m2">
+                <input id="postal_code" type="text" class="validate">
+                <label for="postal_code">Postal code</label>
+            </div>
+        </div>
+
+        <div class="divider"> </div>
+
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Trasporto ordinario</div>
+                <div class="collapsible-body">
+                    <div class="row section">
+                        <h5> Dati mezzo da inviare </h5>
+                        <div class="row">
+                            <div class="input-field col m5">
+                                <input type="date" class="datepicker">
+                                <label for="date">Date</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header  yellow accent-2"><i class="material-icons">place</i>Emergenza</div>
+                <div class="collapsible-body">
+
+
+                    <div class="row">
+                        <form role="form">
+                            <div class="form-group">
+                                <div class="input-field col s6" id="myselect">
+                                    <select class="from-control">
+                                <option value="" disabled selected>Tipo di intervento</option>
+                                <option value="1">Cardiaco</option>
+                                <option value="2">Traumatico</option>
+                                <option value="3">Incidente</option>
+                                <option value="4">Altro</option>
+                            </select>
+                                    <label>Tipo di intervento</label>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div>
+                            <div>
+                                <h3>Emergenza</h3>
+                            </div>
+                            <div class="switch">
+                                <label> 
+                                    Off
+                                    <input type="checkbox" id="selettoreEmergenza"> 
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input-field col s6" id="mezzoInv">
+                            <select>
+                                <option value="" disabled selected>Mezzo da inviare</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">5</option>
+                            </select>
+                            <label>Tipo di intervento</label>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col l12 m12 s12">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="descrizioneEvento" class="materialize-textarea"></textarea>
+                                    <label for="descrizioneEvento">Descrizione evento</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="fixed-action-btn horizontal click-to-toggle">
+                            <a class="btn-floating btn-large red">
+                                <i class="material-icons">menu</i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="btn-floating red" onClick="return codiceRosso();"></a>
+                                </li>
+                                <li>
+                                    <a class="btn-floating yellow darken-1" onClick="return codiceGiallo();"></a>
+                                </li>
+                                <li>
+                                    <a class="btn-floating green" onClick="return codiceVerde();"></a>
+                                </li>
+                                <li>
+                                    <a class="btn-floating white" onClick="return codiceBianco();"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="divider"> </div>
+
+        <div id="lastDivBeforeFooter">
+            <a class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Invia nuova scheda" onclick="Materialize.toast('Scheda inviata', 1000)">Send</a>
+        </div>
+
+    </div>
+
+    <div class="small s3" id=footer>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Sistema gestionale viaggi</h5>
+                        <p class="grey-text text-lighten-4">Sistema gestionale web-based multi-platform.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Link utili</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2017 Copyright
+                    <a class="grey-text text-lighten-4 right" href="#!">Matteo Incani</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB_MORHYK_P7NE_MX0-AfnQQOnRUAtrkfg",
+            authDomain: "app1-3f6c0.firebaseapp.com",
+            databaseURL: "https://app1-3f6c0.firebaseio.com",
+            projectId: "app1-3f6c0",
+            storageBucket: "app1-3f6c0.appspot.com",
+            messagingSenderId: "507029958064"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/tripForm.js"></script>
+</body>
+
+</html>

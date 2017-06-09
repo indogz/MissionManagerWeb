@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/myStyle.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/viewStatus.css" media="screen,projection" />
+
+    <script type="text/javascript" src="js/meteo.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+
+    <div id=header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">Mission Manager beta</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Documentazione</a></li>
+                    <li><a href="badges.html">Badges</a></li>
+                   <li><span id="signOut"><a href="index.html" >LogOut</a></span></li>
+                    <li><a href="mobile.html">Mobile app</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id=content>
+
+        <div class="row s0 m12 l12" id=contributi>
+            <div class="row">
+                <h3> Con il contributo di</h3>
+            </div>
+
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://www.notairiuniti.it/file/news/11/zoom_1_calcolo-imu-comune-di-venezia.jpg">
+                        <!-- random image -->
+                        <div class="caption left-align">
+                            <h3>Comune di Venezia</h3>
+                            <h5 class="light grey-text text-lighten-3">Per i dati meteo marini</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://www.isasi.cnr.it/wp-content/themes/zisasi/images/cnrlogo.png">
+                        <!-- random image -->
+                        <div class="caption left-align">
+                            <h3>CNR</h3>
+                            <h5 class="light grey-text text-lighten-3">Per i dati meteo marini</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://www.dmi.units.it/borse-dottorati/fluid/images/CNR.jpg">
+                        <!-- random image -->
+                        <div class="caption left-align">
+                            <h3>Programma ISMAR</h3>
+                            <h5 class="light grey-text text-lighten-3">Per i dati della piattaforma ISMAR</h5>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="http://www.arpa.veneto.it/arpavinforma/comunicati-stampa/archivio/immagini/copy_of_logo_arpav.gif">
+                        <!-- random image -->
+                        <div class="caption left-align">
+                            <h3>Arpa Veneto</h3>
+                            <h5 class="light grey-text text-lighten-3">Per il radar meteo</h5>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+        <h2> Dati meteomare</h2>
+
+        <div id=demo class "row">
+
+            <div class="divider"> </div>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header  yellow accent-2"><i class="material-icons">place</i>Vento</div>
+                    <div class="collapsible-body">
+                        <div class="col l6 m6 s6">
+                            <div>
+                                <table class="highlight">
+                                    <thead>
+                                        <tr>
+                                            <th>Stazione</th>
+                                            <th>Ora</th>
+                                            <th>Livello</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="putDataHere">
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="collapsible-header  yellow accent-2"><i class="material-icons">place</i>Temperatura aria</div>
+                    <div class="collapsible-body">
+                        <div class="col l12 m12 s12">
+                            <div>
+                                <table class="highlight">
+                                    <thead>
+                                        <tr>
+                                            <th>Stazione</th>
+                                            <th>Ora</th>
+                                            <th>Livello</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="putAriaHere">
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col l6  ">
+                    <img class="materialboxed " id="radarArpav"></div>
+                <div class="col l6  ">
+                    <img class="materialboxed " id="radarArpavMGrande"></div>
+            </div>
+        </div>
+
+
+
+        <div id="lastDivBeforeFooter">
+            <a class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Ricarica la pagina" onclick="Materialize.toast('Refresh', 1000)">Refresh</a>
+        </div>
+    </div>
+
+    <div class="small s3" id=footer>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Sistema gestionale viaggi</h5>
+                        <p class="grey-text text-lighten-4">Sistema gestionale web-based multi-platform.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Link utili</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2017 Copyright
+                    <a class="grey-text text-lighten-4 right" href="#!">Matteo Incani</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+  
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/meteo.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    
+</body>
+
+</html>

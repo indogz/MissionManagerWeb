@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/myStyle.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+
+    <div id=header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">Mission Manager beta</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Documentazione</a></li>
+                    <li><a href="badges.html">Badges</a></li>
+                    <li><span id="signOut"><a href="index.html" >LogOut</a></span></li>
+                    <li><a href="mobile.html">Mobile app</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id=content class="container">
+
+        <!-- Prima riga -->
+        <div class="row">
+            <h2> <small>Utility</small></h2>
+
+            <div class="col s12 m4 l4">
+                <div id="newTrip" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="media/img/newTrip.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">New trip</span>
+                        <p><a href="tripForm.html">Send <i class="material-icons right">playlist_add</i></a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">New trip<i class="material-icons right">close</i></span>
+                        <p>Invia un nuovo viaggio ad un driver. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4 l4">
+                <div id="status" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="media/img/suem.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">View status</span>
+                        <p><a href="viewStatus.html">View <i class="material-icons right">zoom_in</i></a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">View Status<i class="material-icons right">close</i></span>
+                        <p>Controlla lo stato delle ultime operazioni</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4 l4">
+                <div id="maps" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="media/img/maps.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Show map</span>
+                        <p><a href="https://www.google.it/maps/place/Venezia/@45.4058032,12.1015495,10z">Show <i class="material-icons right">my_location</i></a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Show map<i class="material-icons right">close</i></span>
+                        <p>Controlla l'ultima posizione di un diver.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Seconda riga-->
+        <div class="row">
+            <h2 id="title2"> Supporto </h2>
+            <div class="col s12 m4 l4">
+                <div id="maree" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="media/img/tide_icon.svg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Maree</span>
+                        <p><a href="http://datimeteomarino.altervista.org/">Visualizza <i class="material-icons right">add_alert</i></a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Maree<i class="material-icons right">close</i></span>
+                        <p>Visualizza i dati delle maree e delle relative stazioni aggiornate ogni 5 minuti con dati del CNR.
+                            </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4 l4">
+                <div id="suem" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="media/img/status.png">
+                    </div>
+
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">SUEM</span>
+
+                        <p><a href="admin.html">Allerta <i class="material-icons right">add_alert</i></a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">SUEM<i class="material-icons right">close</i></span>
+                        <p>Allerta la Centrale Operativa del Soccorso Sanitario</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4 l4">
+                <div id="vvf" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="media/img/vvf.svg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Vigili del fuoco</span>
+                        <p><a href="#">Allerta <i class="material-icons right">add_alert</i></a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Richiedi supporto per mettere in sicurezza la scena o per coadiuvare gli equipaggi nel territorio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="small s3" id=footer>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Sistema gestionale viaggi</h5>
+                        <p class="grey-text text-lighten-4">Sistema gestionale web-based multi-platform.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Link utili</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2017 Copyright
+                    <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/matteo-incani-143b84138/">Matteo Incani</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/myJs.js"></script>
+</body>
+
+</html>
